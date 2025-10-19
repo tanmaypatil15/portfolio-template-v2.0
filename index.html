@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piet Terheyden</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Corinthia:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kalam:wght@300;400;700&family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="profile">
+        <img src="images/profile-picture.jpg" alt="Piet Terheyden" class="avatar" />
+        <div class="info">
+          <h1 class="info-title">Tanmay Patil</h1>
+          <p class="info-subtitle">Designer & founder in Berlin</p>
+          <span class="info-tag">piet.page</span>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <span class="tab active" data-tab="about">About</span>
+        <span class="tab" data-tab="journey">Journey</span>
+        <span class="tab" data-tab="projects">Projects</span>
+        <span class="tab" data-tab="writing">Writing</span>
+        <span class="tab" data-tab="experience">Education</span>
+      </div>
+
+      <div class="tab-content active" id="about">
+        <p>Hey, I'm Piet. I design and build things.</p>
+        <p>I'm the co-founder of Literal, the social platform for books and run <a href="#">Minimal Gallery</a>, a
+          curated source of website design inspiration.</p>
+        <p>This year my friend Maxime and I started <strong>Spinoff Studio</strong>. We are combining our experiences
+          and
+          efforts to form an independent team, launching our own ventures and occasionally partnering with companies on
+          their journey.</p>
+        <p>Our first project is <strong>Waitless</strong>, the solution to quickly create a sign up page for anything
+          and
+          let people climb up lists through referrals. We are also tinkering with POOL, an iOS app that makes sense of
+          your screenshots.</p>
+        <p>I love taking complex problems and products and simplifying them through design. Before focussing on my own
+          ventures I ran Some Studio, my one-man agency supported by a network of selected freelancers. I had the
+          pleasure
+          of working with clients in many different fields and industries, from small startups over to companies like
+          Porsche, H&M and Red Bull. Over the course of a decade I produced projects for over 100 brands.</p>
+
+        <div class="links">
+          <a href="#">Twitter ↗</a>
+          <a href="#">Email ↗</a>
+          <a href="#">Literal ↗</a>
+          <a href="#">LinkedIn ↗</a>
+          <a href="#">Read.cv ↗</a>
+        </div>
+      </div>
+
+      <div class="tab-content" id="writing">
+        Test
+      </div>
+
+      <div class="tab-content" id="projects">
+        <div class="group-info">
+          <h2>Projects</h2>
+          <div class="group-item">
+            <span class="year">2024</span>
+            <div class="group-detail">
+              <a href="#" class="group-title">Waitless ↗</a>
+              <p class="group-desc">The first project co-founded under Spinoff Studio. Waitless lets you create a sign
+                up
+                page for anything with just a few clicks and let people climb up your list through referrals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="journey">
+        <div class="group-info">
+          <h2>Recent Experience</h2>
+          <div class="group-item">
+            <span class="year">2010 - 2020</span>
+            <div class="group-detail">
+              <div class="group-flex">
+                <a href="#" class="group-title">Some Studio ↗</a>
+                <span class="group-position">Senior Web Developer</span>
+              </div>
+              <p class="group-desc">I've had the pleasure to work with clients in many different fields, from small to big. I designed everything from websites to apps, developed and prototyped concepts, coded landing pages or shops or did creative- and art direction for brands.
+                <p>1. 100+ projects for 50+ brands, including Porsche, H&M, Red Bull, and many more.</p> 
+                <p>2. Worked with a network of selected freelancers to deliver the best results for my clients.</p>
+                <p>3. Focused on creating simple and effective solutions for complex problems.</p>
+              </p>
+              <div class="group-work">
+                <h2 class="link-title">Client Work</h2>
+                <p> 2 min read</p>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', function () {
+        const target = this.getAttribute('data-tab');
+
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+        this.classList.add('active');
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
